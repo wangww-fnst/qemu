@@ -4553,6 +4553,46 @@
 { 'command': 'xen-load-devices-state', 'data': {'filename': 'str'} }
 
 ##
+# @xen-set-replication
+#
+# Enable or disable replication
+#
+# @enable: true to enable, false to disable.
+#
+# @primary: true for primary or false for secondary
+#
+# @failover: true to do failover, false to stop
+#
+# Returns: nothing
+#
+# Since: 2.6
+##
+{ 'command': 'xen-set-replication',
+  'data': { 'enable': 'bool', 'primary': 'bool', '*failover' : 'bool' } }
+
+##
+# @xen-get-replication-error
+#
+# Get replicatin error that occurs when the vm is running
+#
+# Returns: nothing
+#
+# Since: 2.6
+##
+{ 'command': 'xen-get-replication-error' }
+
+##
+# @xen-do-checkpoint
+#
+# Do checkpoint
+#
+# Returns: nothing
+#
+# Since: 2.6
+##
+{ 'command': 'xen-do-checkpoint' }
+
+##
 # @GICCapability:
 #
 # The struct describes capability for a specific GIC (Generic

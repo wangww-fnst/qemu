@@ -1751,6 +1751,45 @@ Set QOM property @var{property} of object at location @var{path} to value @var{v
 ETEXI
 
     {
+        .name       = "xen_set_replication",
+        .args_type  = "item:s?",
+        .params     = "[subcommand]",
+        .help       = "show various information about the system state",
+        .cmd        = hmp_info_help,
+        .sub_table  = info_cmds,
+    },
+
+STEXI
+@end table
+ETEXI
+
+    {
+        .name       = "xen_get_replication_error",
+        .args_type  = "item:s?",
+        .params     = "[subcommand]",
+        .help       = "show various information about the system state",
+        .cmd        = hmp_info_help,
+        .sub_table  = info_cmds,
+    },
+
+STEXI
+@end table
+ETEXI
+
+    {
+        .name       = "xen_do_checkpoint",
+        .args_type  = "item:s?",
+        .params     = "[subcommand]",
+        .help       = "show various information about the system state",
+        .cmd        = hmp_info_help,
+        .sub_table  = info_cmds,
+    },
+
+STEXI
+@end table
+ETEXI
+
+    {
         .name       = "info",
         .args_type  = "item:s?",
         .params     = "[subcommand]",

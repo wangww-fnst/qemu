@@ -7,6 +7,7 @@ common-obj-y += xbzrle.o postcopy-ram.o
 common-obj-y += qjson.o
 
 common-obj-$(CONFIG_RDMA) += rdma.o
+common-obj-y += colo.o
 
 common-obj-y += block.o
 
